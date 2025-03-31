@@ -7,7 +7,7 @@ local event, side, channel, replyChannel, message, distance
 while true do
 	
 	repeat
-		event, side, channel, replyChannel, message, distance os.pullEvent("modem_message")
+		event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
 	until channel == 80
 		print(tostring("message:", message, "\n Channel:", replyChannel)
 end
